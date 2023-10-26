@@ -1,0 +1,9 @@
+@import '@styles/index';
+
+.app {
+  width: 100vw;
+  height: 100vh;
+
+  @extend %flex-row;
+  @extend %flex-center;
+}
