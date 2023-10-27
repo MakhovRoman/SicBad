@@ -4,6 +4,6 @@
   width: 100vw;
   height: 100vh;
 
-  @extend %flex-row;
-  @extend %flex-center;
+  @extend %flex-column;
+  align-items: center;
 }

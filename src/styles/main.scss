@@ -1,1 +1,10 @@
-@import './reset'
+@import './reset';
+@import '@styles/fonts';
+
+body {
+  background: rgb(84,84,91);
+  background: linear-gradient(83deg, rgba(84,84,91,1) 0%, rgba(55,55,85,1) 32%, rgba(95,99,124,1) 100%);
+
+  font-family: "Roboto";
+  font-weight: normal;
+}
