@@ -8,7 +8,7 @@ export const ResultBlock: FC<ResultBlockProps> = ({total, intensive}) => {
 
     return (
         <div className={styles.result}>
-            <Title title='Результаты'/>
+            <Title title='Результаты' type="h3" isDivider/>
             <p className={styles.result__description}>Расчет оптимального числа койко-мест на предстоящие 14 дней</p>
             <p className={styles.result__data}>
                 <span>Чк<sub>общ</sub></span>

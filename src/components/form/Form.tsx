@@ -31,12 +31,12 @@ export const Form:FC<FormProps> = ({totalDispatch, intensiveDispatch}) => {
 
   return (
     <div className={styles.form}>
-        <Title title='Исходные данные'/>
+        <Title title='Исходные данные' type='h3' isDivider/>
         <FormItem description={InputLabels.TOTAL} value={total} dispatch={setTotal}/>
         <FormItem description={InputLabels.MEDIANA} value={mediana} dispatch={setMediana}/>
         <FormItem description={InputLabels.MEDIANA_SMALL} value={mediana_small} dispatch={setMedianaSmall}/>
         <FormItem description={InputLabels.MEDIANA_HEAVY} value={mediana_heavy} dispatch={setMedianaHeavy}/>
-        <FormItem description={InputLabels.MEDIANA_PRESUMABLE} value={mediana_presumable} dispatch={setMedianaPresumable}/>
+        <FormItem description={InputLabels.MEDIANA_PRESUMABLE} value={mediana_presumable} dispatch={setMedianaPresumable} note={InputLabels.NOTE}/>
     </div>
   )
 }

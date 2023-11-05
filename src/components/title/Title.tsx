@@ -2,24 +2,29 @@ import {Divider, Typography} from "@mui/material";
 import {FC} from "react";
 import { TitleProps } from "./types";
 
-export const Title:FC<TitleProps> = ({title}) => {
+export const Title:FC<TitleProps> = ({title, type, isDivider, fontSize}) => {
     return (
         <>
             <Typography
-                variant="h3"
+                variant={type}
                 textAlign='center'
                 gutterBottom
                 color='white'
+                sx={{
+                    fontSize: {fontSize}
+                }}
             >
                 {title}
             </Typography>
-            <Divider
-                light={false}
-                sx={{
-                    backgroundColor: "white",
-                    marginBottom: '17px'
-                }}
-            />
+            { isDivider &&
+                <Divider
+                    light={false}
+                    sx={{
+                        backgroundColor: "white",
+                        marginBottom: '17px'
+                    }}
+                />
+            }
         </>
     )
 };

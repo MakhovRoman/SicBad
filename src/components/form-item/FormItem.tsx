@@ -3,7 +3,7 @@ import styles from './FormItem.module.scss';
 import {ChangeEvent, FC} from "react";
 import {FormItemProps} from "@components/form-item/types.ts";
 
-export const FormItem:FC<FormItemProps> = ({description, value, dispatch}) => {
+export const FormItem:FC<FormItemProps> = ({description, value, dispatch, note}) => {
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         const value = Number(event.target.value);
 
@@ -26,7 +26,10 @@ export const FormItem:FC<FormItemProps> = ({description, value, dispatch}) => {
                     padding: 0
                 }}
             />
-            <p>{description}</p>
+            <div className={styles.formItem__description}>
+                <p>{description}</p>
+                <p className={styles.formItem__note}>{note}</p>
+            </div>
         </div>
     );
 };

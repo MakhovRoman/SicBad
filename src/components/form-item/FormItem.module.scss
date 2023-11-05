@@ -13,4 +13,14 @@
   & + & {
     margin-top: 30px;
   }
+
+  &__description {
+    @extend %flex-column;
+  }
+
+  &__note {
+    font-size: 10px;
+    position: relative;
+    top: 35px;
+  }
 }
