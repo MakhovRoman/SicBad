@@ -8,6 +8,13 @@ export const theme = createTheme({
                     paddingTop: 8
                 }
             }
+        },
+        MuiDivider: {
+            styleOverrides: {
+                root: {
+                    marginBottom: 30
+                }
+            }
         }
     }
 })

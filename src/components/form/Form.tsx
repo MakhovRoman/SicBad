@@ -1,5 +1,5 @@
 import styles from './Form.module.scss'
-import { InputLabels } from '@/utils/constants'
+import { InputLabels, Remarks } from '@/utils/constants'
 import {FormItem} from "@components/form-item";
 import {Calculations} from "@utils/calculations.ts";
 import {FC, useEffect, useState} from "react";
@@ -36,6 +36,7 @@ export const Form:FC<FormProps> = ({totalDispatch, intensiveDispatch}) => {
         <FormItem description={InputLabels.MEDIANA} value={mediana} dispatch={setMediana}/>
         <FormItem description={InputLabels.MEDIANA_SMALL} value={mediana_small} dispatch={setMedianaSmall}/>
         <FormItem description={InputLabels.MEDIANA_HEAVY} value={mediana_heavy} dispatch={setMedianaHeavy}/>
+        <p className={styles.form_paragraph}>{Remarks[0]}</p>
         <FormItem description={InputLabels.MEDIANA_PRESUMABLE} value={mediana_presumable} dispatch={setMedianaPresumable} note={InputLabels.NOTE}/>
     </div>
   )

@@ -27,7 +27,7 @@ export const FormItem:FC<FormItemProps> = ({description, value, dispatch, note})
                 }}
             />
             <div className={styles.formItem__description}>
-                <p>{description}</p>
+                <p className={note && styles.beforeNote}>{description}</p>
                 <p className={styles.formItem__note}>{note}</p>
             </div>
         </div>

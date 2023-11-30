@@ -8,17 +8,33 @@
   margin-top: 50px;
   color: white;
 
-  & p {
-    font-size: 20px;
+  &__block {
+    @extend %flex-row;
+    justify-content: space-between;
   }
 
   &__description {
+    font-size: 20px;
     margin-bottom: 20px;
+    text-align: center;
   }
 
   &__data {
-    width: 150px;
-    @extend %flex-row;
-    justify-content: space-between;
+    width: 380px;
+    @extend %flex-column;
+    text-align: center;
+    border: 2px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    & p:first-child {
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    & p:last-child {
+      font-size: 30px;
+    }
   }
 }

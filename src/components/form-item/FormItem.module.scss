@@ -16,6 +16,7 @@
 
   &__description {
     @extend %flex-column;
+    position: relative;
   }
 
   &__note {
@@ -23,4 +24,10 @@
     position: relative;
     top: 35px;
   }
+}
+
+.beforeNote {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
